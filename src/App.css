@@ -122,7 +122,7 @@ li + li {
 .blob {
   position: absolute;
   z-index: 1;
-  right: 18vw;
+  right: 16vw;
   top: -3vh;
   left: -2;
 }
