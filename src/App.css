@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&family=Roboto+Mono:wght@300;400;600&display=swap");
+
+* {
+  font-family: "Roboto Mono", monospace;
+}
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border-radius: 7px;
+  cursor: pointer;
+}
+:root {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+#light {
+  background-image: radial-gradient(rgb(219, 117, 117) 10%, transparent 10%),
+    radial-gradient(rgb(219, 117, 117) 10%, transparent 10%);
+  background-position: 0px 0px, 5px 5px;
+  background-size: 10px 10px;
+  background-color: #fff5f5;
+}
+#dark {
+  background-color: #1c1e25;
+  color-scheme: dark;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#light .empty_div {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+#dark .empty_div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.header {
+  width: auto;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0px 70px 10px 70px;
+}
+.header_right {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 65%;
+  padding: 0px 80px 0px 80px;
+}
+#light .header_right button {
+  width: 160px;
+  height: 65px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: black;
+  border: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#dark .header_right button {
+  width: 160px;
+  height: 65px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: black;
+  border: 3px solid #cdcdcd;
+  color: #fdfdfd;
+}
+.header_logo {
+  font-family: "Rammetto One", cursive;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+#light .header_logo a {
+  color: black;
+  font-family: "Rammetto One", cursive;
+  cursor: pointer;
+}
+#dark .header_logo a {
+  color: #dddbdb;
+  font-family: "Rammetto One", cursive;
+  cursor: pointer;
+}
+.header_logo span {
+  font-family: "Rammetto One", cursive;
+  color: #f47628;
+}
+#light .nav > ul {
+  display: flex;
+}
+#dark .nav > ul {
+  display: flex;
+  color: #dddbdb;
+}
+.nav > ul li {
+  cursor: pointer;
+}
+li + li {
+  margin-left: 40px;
+}
+.hero {
+  width: auto;
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 70px 10px 70px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero_right {
+  display: block;
+  position: relative;
+}
+.blob {
+  position: absolute;
+  z-index: 1;
+  right: 20vw;
+  top: -3vh;
+  left: -2;
+}
+.hero_image {
+  position: absolute;
+  width: 50vw;
+  z-index: 2;
+  right: 15vw;
+  bottom: 0%;
+  top: 0%;
+}
+.hero_image2 {
+  position: absolute;
+  width: 40vw;
+  z-index: 3;
+  right: 20vw;
+  top: 12vh;
+}
+.hero button {
+  height: 60px;
+  width: 220px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: none;
+}
+.hero button > span {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.hero_left {
+  width: 30vw;
+  display: flex;
+  justify-content: flex-start;
+  height: fit-content;
+  flex-direction: column;
+}
+.hero_article {
+}
+#light .hero_article h1 {
+  font-size: 3.8rem;
+  color: #4a4a4a;
+  margin-top: 0;
+}
+#dark .hero_article h1 {
+  font-size: 3.8rem;
+  color: #dddbdb;
+  margin-top: 0;
+}
+.hero_article p {
+  color: #aaaaaa;
+  font-size: 1.8rem;
+  margin-top: -5vh;
+}
+
+.hero_article_actions {
+  display: flex;
+  margin-top: 5vh;
+}
+
+#light .hero_article_actions button:nth-child(2) {
+  background: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#dark .hero_article_actions button:nth-child(2) {
+  background: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #aaaaaa;
+}
+.hero_article_actions button:nth-child(2) > i {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-right: 10px;
+}
+#light .hero_article_actions button:nth-child(1) {
+  background-color: #fe7c1fe8;
+  color: white;
+  box-shadow: 0px -2px 22px -2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -2px 22px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -2px 22px -2px rgba(0, 0, 0, 0.3);
+}
+#dark .hero_article_actions button:nth-child(1) {
+  background-color: #d88552;
+  color: white;
+  box-shadow: 0px -2px 22px -2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px -2px 22px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px -2px 22px -2px rgba(0, 0, 0, 0.3);
+}
+.hero_article_actions button:nth-child(1) > i {
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+.theme_switch {
+  position: absolute;
+  bottom: 3%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+}
+
+#light .theme_switch > label {
+  color: black;
+  margin-right: 20px;
+  font-weight: bolder;
+}
+#dark .theme_switch > label {
+  color: white;
+  margin-right: 20px;
+  font-weight: bolder;
+}
+.theme_switch i {
+  margin-right: 30px;
+  font-size: 6rem;
+  z-index: 4;
+}
+#dark .theme_switch i {
+  margin-right: 30px;
+  font-size: 6rem;
+  z-index: 4;
+  color: #cdcdcd;
 }
