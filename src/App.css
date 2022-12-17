@@ -164,18 +164,18 @@ li + li {
 }
 
 #light .hero_article h1 {
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   color: #4a4a4a;
   margin-top: 0;
 }
 #dark .hero_article h1 {
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   color: #dddbdb;
   margin-top: 0;
 }
 .hero_article p {
   color: #aaaaaa;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-top: -5vh;
 }
 
