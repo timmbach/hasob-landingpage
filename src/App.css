@@ -162,8 +162,7 @@ li + li {
   height: fit-content;
   flex-direction: column;
 }
-.hero_article {
-}
+
 #light .hero_article h1 {
   font-size: 3.8rem;
   color: #4a4a4a;
